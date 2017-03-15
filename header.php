@@ -10,18 +10,27 @@
   <body>
 
     <header role="banner" class="header">
-      <h1>
-        <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
-      </h1>
+      <div class="container">
 
-      <?php if (has_nav_menu('menu')): ?>
-        <nav role="navigation">
-          <h2><?php esc_html_e('Menu', 'odontoiatria-mone'); ?></h2>
+        <div class="header__logo">
+          <h1 class="header__logo__title">
+            <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
+          </h1>
+        </div>
 
-          <?php wp_nav_menu(array(
-            'theme_location' => 'menu',
-            'items_wrap' => '%3$s'
-          )); ?>
-        </nav>
-      <?php endif; ?>
+        <?php if (has_nav_menu('menu')): ?>
+          <div class="header__menu">
+            <button type="button" class="button"><?php esc_html_e('Menu', 'odontoiatria-mone'); ?></button>
+          </div>
+
+          <nav role="navigation" class="header__navigation">
+            <h2><?php esc_html_e('Navigazione', 'odontoiatria-mone'); ?></h2>
+
+            <?php wp_nav_menu(array(
+              'theme_location' => 'menu',
+              'items_wrap' => '%3$s'
+            )); ?>
+          </nav>
+        <?php endif; ?>
+      </div>
     </header>
