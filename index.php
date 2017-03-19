@@ -4,10 +4,13 @@
 
   <section class="index">
     
-    <?php if (has_post_thumbnail()): ?>
+    <?php if (has_post_thumbnail(get_option('page_for_posts'))): ?>
       <div class="hero">
         <div class="container">
-          <?php the_post_thumbnail('large'); ?>
+          <?php
+            $page_for_posts = get_option('page_for_posts');
+            echo get_the_post_thumbnail($page_for_posts, 'large');
+          ?>
         </div>
       </div>
     <?php endif; ?>
