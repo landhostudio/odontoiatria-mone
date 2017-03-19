@@ -13,6 +13,9 @@
         <h2><?php printf( __( 'Risultati di cerca per: %s', 'odontoiatria-mone' ), get_search_query() ); ?></h2>
       <?php else: ?>
         <h2><?php esc_html_e('Blog', 'odontoiatria-mone'); ?></h2>
+        <?php if (get_field('news_subtitle', get_option('page_for_posts'))): ?>
+          <p><?php the_field('news_subtitle', get_option('page_for_posts')); ?></p>
+        <?php endif; ?>
       <?php endif; ?>
             
       <?php while (have_posts()): the_post(); ?>
