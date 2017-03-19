@@ -8,14 +8,14 @@
     </div>
   <?php endif; ?>
 
-  <?php if (get_field('studio_headings_title') && get_field('studio_headings_text')): ?>
-    <div class="heading">
-      <div class="container">
-        <h2><?php the_field('studio_headings_title'); ?></h2>
-        <p><?php the_field('studio_headings_text'); ?></p>
-      </div>
+  <div class="heading">
+    <div class="container">
+      <h2><?php the_title(); ?></h2>
+      <?php if (get_field('studio_subtitle')): ?>
+        <p><?php the_field('studio_subtitle'); ?></p>
+      <?php endif; ?>
     </div>
-  <?php endif; ?>
+  </div>
 
   <?php if (have_rows('studio_body')): ?>
     <div class="body">

@@ -23,14 +23,14 @@
     </div>
   <?php endif; ?>
 
-  <?php if (get_field('contact_headings_title') && get_field('contact_headings_text')): ?>
-    <div class="heading">
-      <div class="container">
-        <h2><?php the_field('contact_headings_title'); ?></h2>
-        <p><?php the_field('contact_headings_text'); ?></p>
-      </div>
+  <div class="heading">
+    <div class="container">
+      <h2><?php the_title(); ?></h2>
+      <?php if (get_field('contact_subtitle')): ?>
+        <p><?php the_field('contact_subtitle'); ?></p>
+      <?php endif; ?>
     </div>
-  <?php endif; ?>
+  </div>
 
   <?php if (have_rows('contact_summary')): ?>
     <div class="body">
