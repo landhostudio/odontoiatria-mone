@@ -1,4 +1,4 @@
-<article class="services">
+<article class="professionals">
 
   <?php if (has_post_thumbnail()): ?>
     <div class="hero">

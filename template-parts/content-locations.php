@@ -18,10 +18,10 @@
   <?php endif; ?>
 
   <?php if (have_rows('locations_items')): ?>
-    <div class="locations_items">
+    <div class="body">
       <div class="container">
         <?php while (have_rows('locations_items')): the_row(); ?>
-          <div class="locations__items__item">
+          <div class="body__item">
             <h3><?php the_sub_field('locations_items_title'); ?></h3>
             <p><?php the_sub_field('locations_items_text'); ?></p>
 
