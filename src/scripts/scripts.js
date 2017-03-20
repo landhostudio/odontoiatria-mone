@@ -7,6 +7,9 @@
     if ($('.carousel').length) {
       initCarousel();
     }
+    if ($('.gallery').length) {
+      initGallery();
+    }
     if ($('.map').length) {
       initGoogleMaps();
     }
@@ -17,6 +20,28 @@
     $('.toggle').click(function(event) {
       $('.header').toggleClass('header--opened');
     });
+  };
+
+  function initGallery() {
+
+    $('.gallery').each(function() {
+      $(this).magnificPopup({
+        removalDelay: 300,
+        tClose: 'Chiudi',
+        tLoading: 'Caricamento…',
+        delegate: '.gallery__item a',
+        type: 'image',
+        gallery: {
+          enabled: true,
+          preload: [0,2],
+          tPrev: 'Precedente',
+          tNext: 'Successiva',
+          tCounter: '%curr% / %total%'
+        },
+        autoFocusLast: false
+      });
+    });
+
   };
 
   function initCarousel() {
