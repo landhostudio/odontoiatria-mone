@@ -1,6 +1,17 @@
 .header
-  background-color: $color-2
+  position: fixed
+  top: 0
+  left: 0
   width: 100%
+  background-color: $color-2
+  box-shadow: 0 0 em-calc(16) rgba($color-1, 0.12)
+  z-index: 2
+
+  + *
+    margin-top: em-calc(96)
+
+    @include media($screen-sm-min)
+      margin-top: em-calc(128)
 
   .container
     display: flex
