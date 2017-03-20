@@ -16,6 +16,14 @@
 
       add_theme_support('html5', array('caption'));
 
+      // SVG support -----------------------------------------------------------
+
+      function svg_upload($mimes) {
+        $mimes['svg'] = 'image/svg+xml';
+        return $mimes;
+      }
+      add_filter('upload_mimes', 'svg_upload');
+
 			// Enables dynamic navigation --------------------------------------------
 
       register_nav_menus( array(
