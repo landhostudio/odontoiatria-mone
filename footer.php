@@ -3,7 +3,7 @@
         <div class="footer__title">
           <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
             <span class="hidden"><?php bloginfo('name'); ?></span>
-            <img src="<?php bloginfo('template_url'); ?>/dist/img/logo-white.png" alt="" class="footer__info-logo">
+            <img src="<?php bloginfo('template_url'); ?>/dist/img/logo-white.png" alt="">
           </a>
         </div>
 
