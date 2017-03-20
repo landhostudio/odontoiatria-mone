@@ -3,10 +3,17 @@
   'use strict';
 
   var init = function() {
+    initHeader();
     if ($('.map').length) {
       initGoogleMaps();
     }
     initLog();
+  };
+
+  function initHeader() {
+    $('.toggle').click(function(event) {
+      $('.header').toggleClass('header--opened');
+    });
   };
 
   function initGoogleMaps() {
