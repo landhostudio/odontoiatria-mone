@@ -43,13 +43,15 @@
     </div>
   </section>
 
-  <?php
-    the_posts_navigation( array(
-      'screen_reader_text' => __('Navigazione news', 'odontoiatria-mone'),
-      'prev_text' => __('Meno recenti', 'odontoiatria-mone'),
-      'next_text' => __('Più recenti', 'odontoiatria-mone')
-    ));
-  ?>
+  <div class="container">
+    <?php
+      the_posts_navigation( array(
+        'screen_reader_text' => __('Navigazione news', 'odontoiatria-mone'),
+        'prev_text' => '<span class="btn">' . __( 'News precedenti', 'odontoiatria-mone' ) .'</span>',
+        'next_text' => '<span class="btn">' . __( 'News recenti', 'odontoiatria-mone' ) .'</span>'
+      ));
+    ?>
+  </div>
 
 <?php else: ?>
   <?php get_template_part('template-parts/content', 'none'); ?>
