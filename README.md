@@ -11,6 +11,15 @@ Official Theme for Odontoiatria Mone
 5. Build project assets running `gulp`
 6. Open watch server with run `gulp watch`
 
+## WordPress
+
+**Plugins:**
+
+- Advanced Custom Fields PRO
+- Force Regenerate Thumbnails
+- Soil
+- WP Migrate DB
+
 ## License
 
 This theme is copyrighted. Non autorizated modification (any of modification of the source code inside this theme folder) of this theme is strongly prohibited.
