@@ -36,7 +36,7 @@
           <div class="body__item">
             <h3><?php the_sub_field('home_summary_title'); ?></h3>
             <p><?php the_sub_field('home_summary_text'); ?></p>
-            <a href="<?php the_sub_field('home_summary_link'); ?>">Approfondisci</a>
+            <a href="<?php the_sub_field('home_summary_link'); ?>" rel="bookmark" class="btn">Approfondisci</a>
           </div>
         <?php endwhile; ?>
       </div>
