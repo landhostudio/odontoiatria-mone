@@ -2,9 +2,9 @@
 
   <?php if (have_rows('home_gallery')): ?>
     <div class="carousel">
-      <div class="container">
+      <div class="carousel__container">
         <?php while (have_rows('home_gallery')): the_row(); ?>
-          <div class="carousel__item">
+          <div class="carousel__cell">
             <?php echo wp_get_attachment_image(get_sub_field('home_gallery_image'), 'large', false, array()); ?>
           </div>
         <?php endwhile; ?>

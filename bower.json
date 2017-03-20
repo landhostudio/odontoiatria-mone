@@ -12,7 +12,8 @@
   ],
   "dependencies": {
     "normalize-scss": "^3.0.3",
-    "fastclick": "^1.0.6"
+    "fastclick": "^1.0.6",
+    "flickity": "^2.0.5"
   },
   "devDependencies": {}
 }

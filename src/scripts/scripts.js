@@ -4,6 +4,9 @@
 
   var init = function() {
     initHeader();
+    if ($('.carousel').length) {
+      initCarousel();
+    }
     if ($('.map').length) {
       initGoogleMaps();
     }
@@ -14,6 +17,31 @@
     $('.toggle').click(function(event) {
       $('.header').toggleClass('header--opened');
     });
+  };
+
+  function initCarousel() {
+
+    var $carousel = $('.carousel__container').flickity({
+      contain: false,
+      autoPlay: 4000,
+      pauseAutoPlayOnHover: false,
+      percentPosition: true,
+      prevNextButtons: false,
+      pageDots: false,
+      resize: false, // false if carousel uses per.height
+      setGallerySize: false, // false if carousel uses per.height
+      wrapAround: true // infinite loop
+    });
+
+    $carousel.on('mouseenter', function() {
+      $carousel.on('mouseleave', onNavMouseleave);
+    });
+
+    function onNavMouseleave() {
+      $carousel.flickity('playPlayer');
+      $carousel.off('mouseleave', onNavMouseleave);
+    };
+
   };
 
   function initGoogleMaps() {
