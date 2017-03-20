@@ -37,3 +37,12 @@
   &:hover
     background-color: $color-3
     color: $color-2
+
+.navigation
+  border-top: em-calc(1) solid rgba($color-1, 0.0625)
+  padding-top: $padding * 2
+  margin-top: $padding / 1.5
+
+  @include media($screen-sm-min)
+    margin-top: 0
+    padding-top: $padding * 3
