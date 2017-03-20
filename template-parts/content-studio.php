@@ -17,8 +17,8 @@
     </div>
   </div>
 
-  <?php if (have_rows('studio_body')): ?>
-    <div class="body">
+  <?php if (have_rows('studio_body') || have_rows('studio_gallery')): ?>
+    <div class="body body--2-col">
       <div class="container">
         <?php while (have_rows('studio_body')): the_row(); ?>
           <div class="body__item">

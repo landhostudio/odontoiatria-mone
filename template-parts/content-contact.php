@@ -33,7 +33,7 @@
   </div>
 
   <?php if (have_rows('contact_summary')): ?>
-    <div class="body">
+    <div class="body body--2-col">
       <div class="container">
         <?php while (have_rows('contact_summary')): the_row(); ?>
           <div class="body__item">

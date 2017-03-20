@@ -28,7 +28,7 @@
   <?php endif; ?>
 
   <?php if (have_rows('home_summary')): ?>
-    <div class="body">
+    <div class="body body--2-col">
       <div class="container">
         <?php while (have_rows('home_summary')): the_row(); ?>
           <div class="body__item">

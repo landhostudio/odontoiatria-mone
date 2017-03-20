@@ -18,7 +18,7 @@
   </div>
 
   <?php if (have_rows('professionals_items')): ?>
-    <div class="body">
+    <div class="body body--2-col">
       <div class="container">
         <?php while (have_rows('professionals_items')): the_row(); ?>
           <div class="body__item">

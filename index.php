@@ -32,7 +32,7 @@
       </div>
     </div>
   
-    <div class="body">
+    <div class="body body--2-col">
       <div class="container">
         <?php while (have_posts()): the_post(); ?>
           <?php get_template_part('template-parts/content', 'preview'); ?>
