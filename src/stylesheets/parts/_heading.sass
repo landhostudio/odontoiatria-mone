@@ -1,0 +1,22 @@
+.heading
+  padding-top: $padding * 1.5
+  padding-bottom: $padding * 1.5
+  margin-bottom: $padding * 2
+  background-color: $color-3
+  color: $color-2
+
+  @include media($screen-sm-min)
+    padding-top: $padding * 2
+    padding-bottom: $padding * 2
+    margin-bottom: $padding * 3
+
+  @include media($screen-md-min)
+    margin-bottom: $padding * 4
+
+  h2
+    margin: 0
+
+  p
+    margin-top: $padding / 2
+    margin-bottom: 0
+    max-width: em-calc(640)
