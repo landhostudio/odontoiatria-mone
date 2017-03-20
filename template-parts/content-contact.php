@@ -2,16 +2,14 @@
 
   <?php if (have_rows('contact_map')): ?>
     <div class="map">
-      <div class="container">
-        <div class="map__object">
-          <div class="map__canvas">
-            <?php
-              while (have_rows('contact_map')): the_row();
-              $location = get_sub_field('contact_map_location');
-            ?>
-              <div class="map__marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-            <?php endwhile; ?>
-          </div>
+      <div class="map__object">
+        <div class="map__canvas">
+          <?php
+            while (have_rows('contact_map')): the_row();
+            $location = get_sub_field('contact_map_location');
+          ?>
+            <div class="map__marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+          <?php endwhile; ?>
         </div>
       </div>
     </div>

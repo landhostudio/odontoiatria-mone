@@ -2,7 +2,10 @@
 
   &__object
     position: relative
-    padding-bottom: 56.25%
+    padding-bottom: per-width(16,9)
+
+    @include media($screen-sm-min)
+      padding-bottom: (per-width(16,9) / 1.5)
 
   &__canvas
     position: absolute
