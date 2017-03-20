@@ -2,8 +2,10 @@
 
   <?php if (has_post_thumbnail()): ?>
     <div class="hero">
-      <div class="container">
-        <?php the_post_thumbnail('large'); ?>
+      <div class="hero__container">
+        <div class="hero__image">
+          <?php the_post_thumbnail('large'); ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
@@ -17,9 +19,11 @@
     </div>
   </div>
 
-  <div class="body">
+  <div class="body body--2-col">
     <div class="container">
-      <?php the_content(); ?>
+      <div class="body__item">
+        <?php the_content(); ?>
+      </div>
     </div>
   </div>
 </article>
