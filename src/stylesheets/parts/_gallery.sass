@@ -1,0 +1,32 @@
+.gallery
+  display: flex
+  flex-wrap: wrap
+  width: 100%
+
+  &--inside
+    width: calc(100% + #{$padding * 2})
+    margin-top: $padding
+    margin-left: - $padding
+    margin-right: - $padding
+
+    @include media($screen-sm-min)
+      margin-top: $padding * 3
+
+  &__item
+    padding: $padding
+    flex-basis: (100% / 3)
+
+    a
+      position: relative
+      display: block
+      line-height: 0
+      overflow: hidden
+
+      &:focus,
+      &:hover
+        img
+          transform: scale(1.025)
+
+    img
+      transition: transform 300ms
+      backface-visibility: hidden

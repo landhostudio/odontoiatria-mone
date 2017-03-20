@@ -28,21 +28,19 @@
             <p><?php the_sub_field('locations_items_text'); ?></p>
 
             <?php if (have_rows('locations_items_gallery')): ?>
-              <div class="gallery">
-                <div class="container">
-                  <?php while (have_rows('locations_items_gallery')): the_row(); ?>
-                    <div class="gallery__item">
-                      <?php
-                        $image = get_sub_field('locations_items_gallery_image');
-                        $size = 'large';
-                        $imageLarge = wp_get_attachment_image_src($image, $size);
-                      ?>
-                      <a href="<?php echo $imageLarge[0]; ?>">
-                        <?php echo wp_get_attachment_image(get_sub_field('locations_items_gallery_image'), 'thumbnail', false, array()); ?>
-                      </a>
-                    </div>
-                  <?php endwhile; ?>
-                </div>
+              <div class="gallery gallery--inside">
+                <?php while (have_rows('locations_items_gallery')): the_row(); ?>
+                  <div class="gallery__item">
+                    <?php
+                      $image = get_sub_field('locations_items_gallery_image');
+                      $size = 'large';
+                      $imageLarge = wp_get_attachment_image_src($image, $size);
+                    ?>
+                    <a href="<?php echo $imageLarge[0]; ?>">
+                      <?php echo wp_get_attachment_image(get_sub_field('locations_items_gallery_image'), 'thumbnail', false, array()); ?>
+                    </a>
+                  </div>
+                <?php endwhile; ?>
               </div>
             <?php endif; ?>
 
