@@ -3,14 +3,16 @@
 <?php if (have_posts()): ?>
 
   <section class="index">
-    
+
     <?php if (has_post_thumbnail(get_option('page_for_posts'))): ?>
       <div class="hero">
-        <div class="container">
-          <?php
-            $page_for_posts = get_option('page_for_posts');
-            echo get_the_post_thumbnail($page_for_posts, 'large');
-          ?>
+        <div class="hero__container">
+          <div class="hero__image">
+            <?php
+              $page_for_posts = get_option('page_for_posts');
+              echo get_the_post_thumbnail($page_for_posts, 'large');
+            ?>
+          </div>
         </div>
       </div>
     <?php endif; ?>
