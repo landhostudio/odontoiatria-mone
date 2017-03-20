@@ -12,24 +12,32 @@
     <header role="banner" class="header">
       <div class="container">
 
-        <div class="header__logo">
-          <h1 class="header__logo__title">
-            <a rel="home" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></span></a>
-          </h1>
-        </div>
+        <h1 class="header__title">
+          <a rel="home" href="<?php echo esc_url(home_url('/')); ?>">
+            <span class="hidden"><?php bloginfo('name'); ?></span>
+            <img src="<?php bloginfo('template_url'); ?>/dist/img/logo-color.png" alt="">
+          </a>
+        </h1>
 
         <?php if (has_nav_menu('menu')): ?>
-          <div class="header__menu">
-            <button type="button" class="button"><?php esc_html_e('Menu', 'odontoiatria-mone'); ?></button>
+          <div class="header__toggle">
+            <button type="button" class="toggle">
+              <span class="hidden"><?php esc_html_e('Menu', 'odontoiatria-mone'); ?></span>
+              <span class="toggle__bar" aria-hidden="true"></span>
+              <span class="toggle__bar" aria-hidden="true"></span>
+              <span class="toggle__bar" aria-hidden="true"></span>
+            </button>
           </div>
 
           <nav role="navigation" class="header__navigation">
-            <h2><?php esc_html_e('Navigazione', 'odontoiatria-mone'); ?></h2>
+            <h2 class="hidden"><?php esc_html_e('Navigazione', 'odontoiatria-mone'); ?></h2>
 
-            <?php wp_nav_menu(array(
-              'theme_location' => 'menu',
-              'items_wrap' => '%3$s'
-            )); ?>
+            <ul class="no-list">
+              <?php wp_nav_menu(array(
+                'theme_location' => 'menu',
+                'items_wrap' => '%3$s'
+              )); ?>
+            </ul>
           </nav>
         <?php endif; ?>
       </div>
