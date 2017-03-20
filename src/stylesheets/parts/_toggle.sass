@@ -1,0 +1,36 @@
+.toggle
+  display: inline-block
+  font-size: em-calc(16)
+  font-weight: normal
+  text-align: center
+  white-space: nowrap
+  padding: em-calc(8) 0
+  background-color: rgba(0,0,0,0)
+  background-image: none
+  border: none
+  border-radius: 0
+  vertical-align: middle
+  cursor: pointer
+  user-select: none
+  touch-action: manipulation
+
+  &__bar
+    display: block
+    background-color: $color-3
+    height: em-calc(3)
+    width: em-calc(22)
+    border-radius: em-calc(2)
+
+    .header--opened &
+      &:nth-of-type(2)
+        transform: translateY(#{em-calc(7)}) rotate(45deg)
+      &:nth-of-type(3)
+        opacity: 0
+      &:nth-of-type(4)
+        transform: translateY(-#{em-calc(7)}) rotate(-45deg)
+
+    + .toggle__bar
+      margin-top: em-calc(4)
+
+  &:focus
+    outline: 0
