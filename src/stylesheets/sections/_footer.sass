@@ -1,0 +1,50 @@
+.footer
+  background-color: $color-3
+  color: $color-2
+  width: 100%
+  margin-top: $padding * 2
+
+  @include media($screen-md-min)
+    margin-top: $padding * 3
+
+  @include media($screen-sm-min)
+    margin-top: $padding * 4
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: $padding * 2
+    padding-bottom: $padding * 2
+
+  &__title
+    @include media(max-width $screen-md-max)
+      margin-bottom: $padding
+
+    img
+      max-width: em-calc(150)
+
+  &__title,
+  &__legal
+    @include media(max-width $screen-md-max)
+      flex-basis: 100%
+
+  &__legal,
+  &__copy
+    p
+      margin: 0
+
+  &__legal
+    margin-bottom: $padding * 2
+
+    @include media($screen-md-min)
+      margin-bottom: $padding * 3
+
+    p
+      font-size: em-calc(14)
+
+  &__copy
+    flex-basis: 100%
+
+    p
+      font-size: em-calc(10)
