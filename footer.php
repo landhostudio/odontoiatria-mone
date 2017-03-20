@@ -19,6 +19,8 @@
       </div>
     </footer>
 
+    <?php get_template_part('template-parts/cookies'); ?>
+
     <?php wp_footer(); ?>
   </body>
 </html>

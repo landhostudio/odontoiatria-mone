@@ -13,6 +13,9 @@
     if ($('.map').length) {
       initGoogleMaps();
     }
+    if ($('.cookies').length) {
+      initCookies();
+    }
     initLog();
   };
 
@@ -355,6 +358,29 @@
       });
       
     });
+
+  };
+
+  function initCookies() {
+    
+    var cookies = Cookies.get('odontoiatria-mone--cookies-accepted');
+
+    if (cookies == 1) {
+
+      $('.cookies').removeClass('cookies--not-accepted');
+
+    } else {
+
+      Cookies.set('odontoiatria-mone--cookies-accepted', '0', {expires: 365});
+
+      $('.cookies').addClass('cookies--not-accepted');
+
+      $('.cookies .btn--alternative-active').click(function(event) {
+        $('.cookies').removeClass('cookies--not-accepted');
+        Cookies.set('odontoiatria-mone--cookies-accepted', '1', {expires: 365});
+      });
+
+    };
 
   };
 

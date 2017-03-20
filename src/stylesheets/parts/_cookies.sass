@@ -1,0 +1,28 @@
+.cookies
+  display: none
+  position: fixed
+  left: 0
+  bottom: 0
+  width: 100%
+  background-color: rgba($color-3, 0.95)
+  color: $color-2
+  padding-top: $padding
+  z-index: 1
+  box-shadow: 0 0 em-calc(16) rgba($color-1, 0.12)
+
+  @include media(max-width $screen-sm-max)
+    padding-bottom: $padding
+
+  @include media($screen-sm-min)
+    padding-top: $padding * 1.5
+    padding-bottom: $padding
+
+  &--not-accepted
+    display: block
+
+  p
+    margin: 0
+    font-size: em-calc(14)
+
+  .body__item
+    margin-bottom: $padding

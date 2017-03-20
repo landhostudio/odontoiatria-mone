@@ -28,15 +28,48 @@
   color: $color-3
   padding: $padding $padding * 1.5
   text-decoration: none
+  font-weight: 400
+  white-space: nowrap
+  background-image: none
   text-transform: uppercase
   font-size: em-calc(12)
   letter-spacing: em-calc(1)
   border-radius: 2px
+  vertical-align: middle
+  cursor: pointer
+  user-select: none
+  touch-action: manipulation
+  box-sizing: content-box
+  background-color: transparent
+
+  &:focus
+    outline: 0
 
   &:focus,
   &:hover
     background-color: $color-3
     color: $color-2
+
+  &--alternative
+    border-color: $color-2
+    color: $color-2
+
+    &:focus,
+    &:hover
+      background-color: $color-2
+      border-color: $color-2
+      color: $color-3
+    
+    &-active
+      background-color: $color-2
+      border-color: $color-2
+      color: $color-3
+
+      &:focus,
+      &:hover
+        background-color: rgba($color-2, 0.95)
+        border-color: $color-2
+        color: $color-3
 
 .navigation
   border-top: em-calc(1) solid rgba($color-1, 0.0625)
