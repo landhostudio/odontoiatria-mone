@@ -1,4 +1,4 @@
-<article class="home">
+<article class="home" itemscope="itemscope" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
   <?php if (have_rows('home_gallery')): ?>
     <div class="carousel">
@@ -23,7 +23,7 @@
   <?php if (get_field('home_headings_title') && get_field('home_headings_text')): ?>
     <div class="heading">
       <div class="container">
-        <h2><?php the_field('home_headings_title'); ?></h2>
+        <h2 itemprop="headline"><?php the_field('home_headings_title'); ?></h2>
         <p><?php the_field('home_headings_text'); ?></p>
       </div>
     </div>

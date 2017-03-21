@@ -1,4 +1,4 @@
-<article class="services">
+<article class="services" itemscope="itemscope" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
   <?php if (has_post_thumbnail()): ?>
     <div class="hero">
@@ -12,7 +12,7 @@
 
   <div class="heading">
     <div class="container">
-      <h2><?php the_title(); ?></h2>
+      <h2 itemprop="headline"><?php the_title(); ?></h2>
       <?php if (get_field('services_subtitle')): ?>
         <p><?php the_field('services_subtitle'); ?></p>
       <?php endif; ?>
@@ -20,7 +20,7 @@
   </div>
 
   <?php if (have_rows('services_items')): ?>
-    <div class="body body--2-col">
+    <div class="body body--2-col" itemprop="description">
       <div class="container">
         <?php while (have_rows('services_items')): the_row(); ?>
           <div class="body__item">

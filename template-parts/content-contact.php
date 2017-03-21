@@ -1,4 +1,4 @@
-<article class="contact">
+<article class="contact" itemscope="itemscope" itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
 
   <?php if (have_rows('contact_map')): ?>
     <div class="map">
@@ -23,7 +23,7 @@
 
   <div class="heading">
     <div class="container">
-      <h2><?php the_title(); ?></h2>
+      <h2 itemprop="headline"><?php the_title(); ?></h2>
       <?php if (get_field('contact_subtitle')): ?>
         <p><?php the_field('contact_subtitle'); ?></p>
       <?php endif; ?>
@@ -31,10 +31,10 @@
   </div>
 
   <?php if (have_rows('contact_summary')): ?>
-    <div class="body body--2-col">
+    <div class="body body--2-col" itemscope itemtype="http://schema.org/LocalBusiness">
       <div class="container">
         <?php while (have_rows('contact_summary')): the_row(); ?>
-          <div class="body__item">
+          <div class="body__item" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <h3><?php the_sub_field('contact_summary_title'); ?></h3>
             <?php the_sub_field('contact_summary_text'); ?>
           </div>
