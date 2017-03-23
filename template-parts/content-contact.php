@@ -15,8 +15,10 @@
     </div>
   <?php elseif (has_post_thumbnail()): ?>
     <div class="hero">
-      <div class="container">
-        <?php the_post_thumbnail('large'); ?>
+      <div class="hero__container">
+        <div class="hero__image">
+          <?php the_post_thumbnail('large'); ?>
+        </div>
       </div>
     </div>
   <?php endif; ?>
