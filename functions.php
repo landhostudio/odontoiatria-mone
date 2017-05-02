@@ -55,6 +55,10 @@
       // Advanced Custom Fields ------------------------------------------------
 
       get_template_part('inc/acf');
+      
+      // Custom dashboard message ----------------------------------------------
+
+      get_template_part('inc/dashboard-custom-widget');
 
     }
 
