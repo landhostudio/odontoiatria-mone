@@ -1,4 +1,4 @@
-<article class="body__item body__item--article" itemscope itemtype="http://schema.org/CreativeWork">
+<article class="body__item body__item--article body__item--article-preview" itemscope itemtype="http://schema.org/CreativeWork">
   <a rel="bookmark" href="<?php the_permalink(); ?>">
     <?php the_post_thumbnail(); ?>
     <p class="date"><?php the_date(); ?></p>
